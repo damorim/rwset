@@ -1,0 +1,15 @@
+digraph "DirectedGraph" {
+ graph [concentrate = true];
+ center=true;
+ fontsize=6;
+ node [ color=blue,shape="box"fontsize=6,fontcolor=black,fontname=Arial];
+ edge [ color=black,fontsize=6,fontcolor=black,fontname=Arial];
+"comp2/Queue comp2/Queue.pushback(int)"[color="red", fontsize="6", fontname="Arial"];
+"comp2/Queue comp2/Queue.pop()" -> "comp2/Queue comp2/Queue.pushback(int)" [label="comp2/Queue comp2/Queue.last : 35" ]
+"comp2/Queue comp2/Queue.pushback(int)" -> "comp2/Queue comp2/Queue.pushback(int)" [label="comp2/Queue comp2/Queue.last : 18" ]
+"comp2/Queue comp2/Queue.pushback(int)" -> "comp2/Queue comp2/Queue.pushback(int)" [label="comp2/Queue comp2/Queue.last : 24" ]
+"comp2/Queue comp2/Queue.pushback(int)" -> "comp2/Queue comp2/Queue.pushback(int)" [label="int comp2/Queue.n : 17" ]
+"comp2/Queue comp2/Queue.pushback(int)" -> "comp2/Queue comp2/Queue.pushback(int)" [label="int comp2/Queue.n : 22" ]
+"void comp2/Queue.<init>()" -> "comp2/Queue comp2/Queue.pushback(int)" [label="comp2/Queue comp2/Queue.last : 12" ]
+"void comp2/Queue.<init>()" -> "comp2/Queue comp2/Queue.pushback(int)" [label="int comp2/Queue.n : 10" ]
+}
