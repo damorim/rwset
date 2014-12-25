@@ -23,6 +23,16 @@ case "$1" in
 	NAME="foo"
         CP="" 
 	;;
+    "bancosimples" ) 
+	PREFIX="bancosimples"
+	NAME="bancosimples"
+        CP="" 
+	;;
+    "domino" ) 
+	PREFIX="domino"
+	NAME="domino"
+        CP="" 
+	;;
     * ) 
 	echo "please inform the name of the subject "
 	exit;

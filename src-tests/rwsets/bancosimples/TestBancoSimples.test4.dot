@@ -1,0 +1,13 @@
+digraph "DirectedGraph" {
+ graph [concentrate = true];
+ center=true;
+ fontsize=6;
+ node [ color=blue,shape="box"fontsize=6,fontcolor=black,fontname=Arial];
+ edge [ color=black,fontsize=6,fontcolor=black,fontname=Arial];
+"double bancosimples/Conta.debitar(double)"[color="red", fontsize="6", fontname="Arial"];
+"double bancosimples/Conta.debitar(double)" -> "double bancosimples/Conta.debitar(double)" [label="double bancosimples/Conta.Saldo : 43" ]
+"double bancosimples/Conta.deposito(double)" -> "double bancosimples/Conta.debitar(double)" [label="double bancosimples/Conta.Saldo : 49" ]
+"void bancosimples/Conta.<init>(java/lang/String,double,bancosimples/Cliente)" -> "double bancosimples/Conta.debitar(double)" [label="double bancosimples/Conta.Saldo : 9" ]
+"void bancosimples/Conta.setSaldo(double)" -> "double bancosimples/Conta.debitar(double)" [label="double bancosimples/Conta.Saldo : 30" ]
+}
+

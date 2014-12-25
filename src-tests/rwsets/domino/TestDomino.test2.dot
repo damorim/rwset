@@ -1,0 +1,12 @@
+digraph "DirectedGraph" {
+ graph [concentrate = true];
+ center=true;
+ fontsize=6;
+ node [ color=blue,shape="box"fontsize=6,fontcolor=black,fontname=Arial];
+ edge [ color=black,fontsize=6,fontcolor=black,fontname=Arial];
+"int domino/Peca.carroca()"[color="red", fontsize="6", fontname="Arial"];
+"void domino/Peca.<init>(int,int)" -> "int domino/Peca.carroca()" [label="I domino/Peca.numeros : 11" ]
+"void domino/Peca.<init>(int,int)" -> "int domino/Peca.carroca()" [label="I domino/Peca.numeros : 12" ]
+"void domino/Peca.<init>(int,int)" -> "int domino/Peca.carroca()" [label="I domino/Peca.numeros : 5" ]
+}
+

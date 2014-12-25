@@ -7,7 +7,11 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
   // Add test classes here
   rwsets.coffeemaker.TestCoffeeMaker.class,
-  rwsets.core.Sanity.class
+  rwsets.core.Sanity.class,
+  rwsets.bancosimples.TestBancoSimples.class,
+  rwsets.delivery.TestDelivery.class,
+  rwsets.domino.TestDomino.class,
+  rwsets.chess.TestChess.class,
 })
 
 public class AllTests  { }

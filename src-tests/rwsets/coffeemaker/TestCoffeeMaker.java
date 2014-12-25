@@ -34,7 +34,8 @@ public class TestCoffeeMaker {
   String RESOURCES_DIR = USER_DIR + SEP + "dat";
 
   @Test
-  public void test0() throws IOException, WalaException, CancelException, ParseException, InvalidClassFileException {
+  public void test0() throws IOException, WalaException, CancelException, ParseException, InvalidClassFileException 
+  {
 
     String strCompUnit = EXAMPLES_SRC + SEP + "coffeemaker/CoffeeMaker.java";
     String coffeejar = EXAMPLES_JAR + SEP + "coffee.jar";
@@ -50,7 +51,8 @@ public class TestCoffeeMaker {
   }
 
   @Test
-  public void testAnalysisWithLineContents() throws Exception {
+  public void testAnalysisWithLineContents() throws Exception 
+  {
     String strCompUnit = EXAMPLES_SRC + SEP + "coffeemaker/CoffeeMaker.java";
     String exclusionFile = RESOURCES_DIR + SEP + "ExclusionAllJava.txt";
     String exclusionFileForCallGraph = RESOURCES_DIR + SEP + "ExclusionForCallGraph.txt";
@@ -65,13 +67,14 @@ public class TestCoffeeMaker {
     Assert.assertTrue((new File(coffeejar)).exists());
 
 
-    String[] args = new String[] { 
+    String[] args = new String[] 
+        { 
         "-appJar=" + coffeejar,
         "-printWalaWarnings=" + false, 
         "-exclusionFile=" + exclusionFile,
         "-exclusionFileForCallGraph=" + exclusionFileForCallGraph,
         "-dotPath=" + "/usr/bin/dot", 
-        "-appPrefix=" + "coffee",
+        "-appPrefix=" + "coffeemaker",
         "-listAppClasses=" + false, 
         "-listAllClasses=" + false,
         "-listAppMethods=" + false, 
