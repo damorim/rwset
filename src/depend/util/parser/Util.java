@@ -71,10 +71,11 @@ public class Util {
     /**
      * collecting class name 
      */
-    MyVisitorAdapter vva = new MyVisitorAdapter(lastClassStr, line);
+    
+    
+    MyVisitorAdapter vva = new MyVisitorAdapter((lastClassStr), line);
     CompilationUnit cUnit = parserClass(classFile);
     cUnit.accept(vva, null);
-    
     if (!vva.found) {
       throw new RuntimeException();
     }
@@ -85,6 +86,12 @@ public class Util {
     };
     
     return result;   
+  }
+  public static String trataString(String cline){
+    int i = cline.lastIndexOf("class ");
+    int j = cline.indexOf(" ",i+6);
+    
+    return cline.substring(0, j+1)+"{";
   }
   
   private static CompilationUnit parserClass(File clazz) throws ParseException {
@@ -102,7 +109,7 @@ public class Util {
     StringBuffer sb = new StringBuffer();
     sb.append("L");
     if (pd != null) {
-      sb.append(pd.getName());
+      sb.append(pd.getName().toString().replaceAll("\\.", "/"));
       sb.append("/");
     }
     for (int i = 0; i < stack.size(); i++) {
@@ -112,9 +119,12 @@ public class Util {
         sb.append("$");
       }
     }
+
     return sb.toString();
   }
 
+ 
+  
   static class MyVisitorAdapter extends VoidVisitorAdapter<Void> {
     
     private String cname, line;
@@ -155,10 +165,7 @@ public class Util {
       }
       StringBuffer sb = new StringBuffer();
       Util.visit(n, null, sb);
-//      System.out.println("===");
-//      System.out.println(sb.toString().trim());
-//      System.out.println(name);
-      if (sb.toString().trim().equals(cname.trim())) {
+      if (sb.toString().replace(" ","").equals(cname.replace(" ", ""))) {
         found = true;
       }        
       super.visit(n, arg);

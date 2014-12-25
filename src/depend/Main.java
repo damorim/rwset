@@ -3,6 +3,7 @@ package depend;
 import japa.parser.ParseException;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Properties;
 
 import com.ibm.wala.classLoader.IBytecodeMethod;
@@ -168,6 +169,10 @@ public class Main {
     MethodDependencyAnalysis mda = createMDA(args);
     
     // find informed class
+    /*Iterator<IClass> it = mda.getCHA().iterator();
+    while(it.hasNext()){
+      System.out.println(it.next());
+    }*/
     IClass clazz = mda.getCHA().lookupClass(TypeReference.findOrCreate(ClassLoaderReference.Application, targetClass));
     if (clazz == null) {
       throw new RuntimeException("Could not find class \"" + targetClass + "\"");

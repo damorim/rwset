@@ -1,0 +1,23 @@
+digraph DirectedGraph {
+ graph [concentrate = true];
+ center=true;
+ fontsize=6;
+ node [ color=blue,shape= box fontsize=6,fontcolor=black,fontname=Arial];
+ edge [ color=black,fontsize=6,fontcolor=black,fontname=Arial];
+
+ addRecipecoffeemakerRecipe  ->    addRecipe coffeemakerRecipe   [label= Lcoffeemaker/Recipe  recipeArray : 58  ]
+ addRecipecoffeemakerRecipe  ->    addRecipe coffeemakerRecipe   [label= Z  recipeFull : 59  ]
+ addRecipecoffeemakerRecipe  ->    editRecipe coffeemakerRecipecoffeemakerRecipe   [label= Lcoffeemaker/Recipe  recipeArray : 58  ]
+ deleteRecipecoffeemakerRecipe  ->     addRecipe coffeemakerRecipe   [label= Lcoffeemaker/Recipe  recipeArray : 79  ]
+ deleteRecipecoffeemakerRecipe  ->     editRecipe coffeemakerRecipecoffeemaker/Recipe   [label= Lcoffeemaker/Recipe  recipeArray : 79  ]
+ editRecipecoffeemakerRecipe,coffeemaker/Recipe  ->     addRecipe coffeemaker/Recipe   [label= Lcoffeemaker/Recipe  recipeArray : 98  ]
+ editRecipecoffeemakerRecipe,coffeemaker/Recipe  ->     editRecipe coffeemaker/Recipe,coffeemaker/Recipe   [label= Lcoffeemaker/Recipe  recipeArray : 98  ]
+ init   ->    addRecipecoffeemakerRecipe   [label= Lcoffeemaker/Recipe  recipeArray : 23  ]
+ init   ->    addRecipecoffeemakerRecipe   [label= Lcoffeemaker/Recipe  recipeArray : 26  ]
+ init   ->    addRecipecoffeemakerRecipe   [label= Z  recipeFull : 24  ]
+ init   ->    addRecipecoffeemakerRecipe   [label= Z  recipeFull : 27  ]
+ init   ->    editRecipecoffeemakerRecipecoffeemakerRecipe   [label= Lcoffeemaker/Recipe  recipeArray : 23  ]
+ init   ->    editRecipecoffeemakerRecipecoffeemakerRecipe   [label= Lcoffeemaker/Recipe  recipeArray : 26  ]
+coffeemakerRecipe.setNamejavalangString   ->    coffeemakerRecipe.equals coffeemaker/Recipe   [label= java/lang/String coffeemaker/Recipe.name : 65  ]
+coffeemakerRecipe.setNamejavalangString   ->  javalangStringcoffeemakerRecipe.getName    [label= java/lang/String coffeemaker/Recipe.name : 65  ]
+}

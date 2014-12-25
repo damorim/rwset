@@ -1,0 +1,42 @@
+//Precisa ser corrigido para rodar nossos tests
+Bugs:
+Arquivo: Util.java
+Classe: Util
+Método: getLineAndWALAClassName
+Linha: s.contains("class");
+Descrição: Não permite que haja nenhuma ocorrencia do palavra class em comentários ou como substring de outra palavra
+sugestao: s.contains(" class ");// Nao resolve o caso de mais de uma classe no mesmo arquivo, nem a palavra class em comentários
+
+//Precisa ser corrigido para rodar nossos tests
+Arquivo: Util.java
+Classe: Util
+Método: getLineAndWALAClassName
+Linha: String[] result = new String[] {
+        lineNumber+"",
+        to_WALA_ClassName(vva.pd, vva.stack)}
+Descrição: to_WALA_ClassName está incorreto. Caso tente utilizar uma classe que esteja em um subpacote a hierarquia de classes 
+ela nao é achada pois o wala representa a hieraquia de pacotes com "/" e o código com ".".
+sugestao : usar um replace de . para /
+
+Arquivo: Util.java
+Classe: MyVisitorAdapter
+Método: printTypeArgs
+Linha:  for (Iterator<Type> i = args.iterator(); i.hasNext();) {
+        throw new UnsupportedOperationException("TODO");
+Descrição: Sempre joga um throw exception. Impossibilita o uso de Colletions na declaraçao da Classe
+sugestao: ?
+
+Arquivo: Util.java
+Classe: MyVisitorAdapter
+Metodo:  public void visit(ClassOrInterfaceDeclaration n, Void arg) {
+Linha: if (sb.toString().trim().equals(cname.trim()))
+Descrição: Não considera quebra de linhas na declaraçao das classes e da erro nesses casos.
+sugestao: ?
+
+ExclusionAllJava.txt -> Qualquer classe que extenda das Classe incluidas no Arquivo  ExclusionAllJava  
+
+
+
+
+
+  

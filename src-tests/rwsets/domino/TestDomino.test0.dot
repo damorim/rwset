@@ -1,0 +1,24 @@
+digraph "DirectedGraph" {
+ graph [concentrate = true];
+ center=true;
+ fontsize=6;
+ node [ color=blue,shape="box"fontsize=6,fontcolor=black,fontname=Arial];
+ edge [ color=black,fontsize=6,fontcolor=black,fontname=Arial];
+"void domino/Partida.calcNext()"[color="red", fontsize="6", fontname="Arial"];
+"void domino/Dupla.<init>(domino/Jogador,domino/Jogador)" -> "Ldomino/Jogador domino/Dupla.getDupla()" [label="Ldomino/Jogador domino/Dupla.dupla : 12" ]
+"void domino/Dupla.<init>(domino/Jogador,domino/Jogador)" -> "Ldomino/Jogador domino/Dupla.getDupla()" [label="Ldomino/Jogador domino/Dupla.dupla : 14" ]
+"void domino/Dupla.<init>(domino/Jogador,domino/Jogador)" -> "Ldomino/Jogador domino/Dupla.getDupla()" [label="Ldomino/Jogador domino/Dupla.dupla : 15" ]
+"void domino/Dupla.<init>(domino/Jogador,domino/Jogador)" -> "Ldomino/Jogador domino/Dupla.getDupla()" [label="Ldomino/Jogador domino/Dupla.dupla : 17" ]
+"void domino/Dupla.<init>(domino/Jogador,domino/Jogador)" -> "Ldomino/Jogador domino/Dupla.getDupla()" [label="Ldomino/Jogador domino/Dupla.dupla : 18" ]
+"void domino/Partida.<init>(domino/Dupla,domino/Dupla)" -> "void domino/Partida.calcNext()" [label="Ldomino/Dupla domino/Partida.duplas : 51" ]
+"void domino/Partida.<init>(domino/Dupla,domino/Dupla)" -> "void domino/Partida.calcNext()" [label="Ldomino/Dupla domino/Partida.duplas : 55" ]
+"void domino/Partida.<init>(domino/Dupla,domino/Dupla)" -> "void domino/Partida.calcNext()" [label="Ldomino/Dupla domino/Partida.duplas : 56" ]
+"void domino/Partida.<init>(domino/Dupla,domino/Dupla)" -> "void domino/Partida.calcNext()" [label="Ldomino/Dupla domino/Partida.duplas : 59" ]
+"void domino/Partida.<init>(domino/Dupla,domino/Dupla)" -> "void domino/Partida.calcNext()" [label="Ldomino/Dupla domino/Partida.duplas : 60" ]
+"void domino/Partida.calcNext()" -> "void domino/Partida.calcNext()" [label="I domino/Partida.ij : 165" ]
+"void domino/Partida.calcNext()" -> "void domino/Partida.calcNext()" [label="I domino/Partida.ij : 166" ]
+"void domino/Partida.iniciarPartida(int)" -> "void domino/Partida.calcNext()" [label="I domino/Partida.ij : 128" ]
+"void domino/Partida.iniciarPartida(int)" -> "void domino/Partida.calcNext()" [label="I domino/Partida.ij : 137" ]
+"void domino/Partida.iniciarPartida(int)" -> "void domino/Partida.calcNext()" [label="I domino/Partida.ij : 138" ]
+}
+

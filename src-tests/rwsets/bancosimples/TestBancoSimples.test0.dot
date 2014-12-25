@@ -1,0 +1,29 @@
+digraph "DirectedGraph" {
+ graph [concentrate = true];
+ center=true;
+ fontsize=6;
+ node [ color=blue,shape="box"fontsize=6,fontcolor=black,fontname=Arial];
+ edge [ color=black,fontsize=6,fontcolor=black,fontname=Arial];
+"void bancosimples/Main.main(Ljava/lang/String)"[color="red", fontsize="6", fontname="Arial"];
+"double bancosimples/Conta.debitar(double)" -> "double bancosimples/Conta.checkSaldo()" [label="double bancosimples/Conta.Saldo : 43" ]
+"double bancosimples/Conta.debitar(double)" -> "double bancosimples/Conta.deposito(double)" [label="double bancosimples/Conta.Saldo : 43" ]
+"double bancosimples/Conta.deposito(double)" -> "double bancosimples/Conta.checkSaldo()" [label="double bancosimples/Conta.Saldo : 49" ]
+"double bancosimples/Conta.deposito(double)" -> "double bancosimples/Conta.deposito(double)" [label="double bancosimples/Conta.Saldo : 49" ]
+"void bancosimples/Banco.<init>()" -> "bancosimples/Cliente bancosimples/Banco.findCliente(java/lang/String)" [label="java/util/Vector bancosimples/Banco.clientes : 15" ]
+"void bancosimples/Banco.<init>()" -> "bancosimples/Conta bancosimples/Banco.findConta(java/lang/String)" [label="java/util/Vector bancosimples/Banco.contas : 14" ]
+"void bancosimples/Banco.<init>()" -> "boolean bancosimples/Banco.addCliente(bancosimples/Cliente)" [label="java/util/Vector bancosimples/Banco.clientes : 15" ]
+"void bancosimples/Banco.<init>()" -> "boolean bancosimples/Banco.addConta(bancosimples/Conta)" [label="java/util/Vector bancosimples/Banco.contas : 14" ]
+"void bancosimples/Cliente.<init>(java/lang/String,java/lang/String,java/lang/String)" -> "java/lang/String bancosimples/Cliente.getRG()" [label="java/lang/String bancosimples/Cliente.RG : 10" ]
+"void bancosimples/Cliente.setConta(bancosimples/Conta)" -> "bancosimples/Conta bancosimples/Cliente.getConta()" [label="bancosimples/Conta bancosimples/Cliente.conta : 15" ]
+"void bancosimples/Cliente.setConta(bancosimples/Conta)" -> "void bancosimples/Cliente.deposito(double)" [label="bancosimples/Conta bancosimples/Cliente.conta : 15" ]
+"void bancosimples/Cliente.setRG(java/lang/String)" -> "java/lang/String bancosimples/Cliente.getRG()" [label="java/lang/String bancosimples/Cliente.RG : 33" ]
+"void bancosimples/Conta.<init>(java/lang/String,double,bancosimples/Cliente)" -> "bancosimples/Cliente bancosimples/Conta.getDono()" [label="bancosimples/Cliente bancosimples/Conta.dono : 10" ]
+"void bancosimples/Conta.<init>(java/lang/String,double,bancosimples/Cliente)" -> "double bancosimples/Conta.checkSaldo()" [label="double bancosimples/Conta.Saldo : 9" ]
+"void bancosimples/Conta.<init>(java/lang/String,double,bancosimples/Cliente)" -> "double bancosimples/Conta.deposito(double)" [label="double bancosimples/Conta.Saldo : 9" ]
+"void bancosimples/Conta.<init>(java/lang/String,double,bancosimples/Cliente)" -> "java/lang/String bancosimples/Conta.getNumeroConta()" [label="java/lang/String bancosimples/Conta.numeroConta : 8" ]
+"void bancosimples/Conta.setDono(bancosimples/Cliente)" -> "bancosimples/Cliente bancosimples/Conta.getDono()" [label="bancosimples/Cliente bancosimples/Conta.dono : 38" ]
+"void bancosimples/Conta.setNumeroConta(java/lang/String)" -> "java/lang/String bancosimples/Conta.getNumeroConta()" [label="java/lang/String bancosimples/Conta.numeroConta : 22" ]
+"void bancosimples/Conta.setSaldo(double)" -> "double bancosimples/Conta.checkSaldo()" [label="double bancosimples/Conta.Saldo : 30" ]
+"void bancosimples/Conta.setSaldo(double)" -> "double bancosimples/Conta.deposito(double)" [label="double bancosimples/Conta.Saldo : 30" ]
+}
+

@@ -31,6 +31,7 @@ public class RWSet {
   }
 
   public String toString() {
+    
     StringBuffer sb = new StringBuffer();
     sb.append("READS FROM:");
     sb.append("\n");
@@ -43,6 +44,7 @@ public class RWSet {
     for (AccessInfo writeAccessInfo: writeSet) {
       sb.append(writeAccessInfo.toString() + "\n");
     }
-    return sb.toString();
+    throw new RuntimeException();
+    //return sb.toString();
   }
 }
