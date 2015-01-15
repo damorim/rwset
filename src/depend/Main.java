@@ -166,14 +166,17 @@ public class Main {
     };
     
     MethodDependencyAnalysis mda = createMDA(args);
-    
+
     // find informed class
     IClass clazz = mda.getCHA().lookupClass(TypeReference.findOrCreate(ClassLoaderReference.Application, targetClass));
     if (clazz == null) {
       throw new RuntimeException("Could not find class \"" + targetClass + "\"");
     }
     // find informed method
+    System.out.println("oi");
+    System.out.println(targetLine);
     IMethod imethod = findMethod(mda, clazz, targetLine);
+    
     
     // run the analysis
     return run(mda, imethod);    

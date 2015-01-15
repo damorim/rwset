@@ -45,7 +45,7 @@ public class TestCoffeeMaker {
     String line = "if(addRecipe(newRecipe)) {";
     SimpleGraph sg = depend.Main.analyze(coffeejar, "coffee", strCompUnit, line);
         
-    String expectedResultFile = TEST_DIR + SEP + "rwsets/coffeemaker/TestCoffeeMaker.test0.data";
+    String expectedResultFile = TEST_DIR + SEP + "rwsets/coffeemaker/TestCoffeeMaker.test0.dot";
     Assert.assertEquals(Helper.readFile(expectedResultFile), sg.toDotString());
   }
 
@@ -97,7 +97,7 @@ public class TestCoffeeMaker {
     IMethod method = depend.Main.findMethod(clazz);
     SimpleGraph sg = depend.Main.run(mda, method);
     
-    String expectedResultFile = TEST_DIR + SEP + "rwsets/coffeemaker/TestCoffeeMaker.testAnalysisWithLineContents.data";
+    String expectedResultFile = TEST_DIR + SEP + "rwsets/coffeemaker/TestCoffeeMaker.testAnalysisWithLineContents.dot";
     Assert.assertEquals(Helper.readFile(expectedResultFile), sg.toString());
   } 
 }

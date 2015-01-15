@@ -29,7 +29,7 @@ public class Util {
     String strCompUnit = 
         System.getProperty("user.dir") + 
         System.getProperty("file.separator") + 
-        "src/examples/D.java";
+        "example-apps\\ip\\dados\\repositorio\\RepAdmArquivo.java";
     getLineAndWALAClassName(line, strCompUnit);
   }
 
@@ -75,6 +75,9 @@ public class Util {
     CompilationUnit cUnit = parserClass(classFile);
     cUnit.accept(vva, null);
     
+    System.out.println("Decl da classe");
+    System.out.println(lastClassStr);
+    
     if (!vva.found) {
       throw new RuntimeException();
     }
@@ -102,7 +105,7 @@ public class Util {
     StringBuffer sb = new StringBuffer();
     sb.append("L");
     if (pd != null) {
-      sb.append(pd.getName());
+      sb.append(pd.getName().toString().replaceAll("\\.", "/"));
       sb.append("/");
     }
     for (int i = 0; i < stack.size(); i++) {
@@ -159,6 +162,7 @@ public class Util {
 //      System.out.println(sb.toString().trim());
 //      System.out.println(name);
       if (sb.toString().trim().equals(cname.trim())) {
+      //if (sb.toString().replace(" ","").equals(cname.replace(" ", ""))) {
         found = true;
       }        
       super.visit(n, arg);

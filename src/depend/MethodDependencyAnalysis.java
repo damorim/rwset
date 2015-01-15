@@ -441,6 +441,7 @@ public class MethodDependencyAnalysis {
     SimpleGraph dependencyGraph = new SimpleGraph();
 
     if(!forwardDependencies){
+      System.out.println();
       Set<AccessInfo> reads = rwSets.get(method).readSet;
       Set<CallSiteReference> callSites = null;
       CallGraph cg = this.getCallGraphGenerator().getFullCallGraph();
