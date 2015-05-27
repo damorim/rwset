@@ -23,16 +23,3 @@ The list in alphabetical order:
 - run: instruments and runs a Java program
 
 - runRegressionTests: run the regression test suite for this project
-
-Example of use 1 (Scenario "dependency graph"):
-
-$> ./build
-$> ./genAppJar
-$> ./genDDG
-$> acroread results/results.pdf
-
-Example of use 2 (Scenario "program instrumentation"):
-
- $> ./build
- $> ./genAgent
- $> ./run

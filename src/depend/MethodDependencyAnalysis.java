@@ -182,7 +182,7 @@ public class MethodDependencyAnalysis {
       }
       
       //simple example of how to use pointer analysis. 
-      searchAliasedPointers(cgg);
+      // searchAliasedPointers(cgg);
         
       // propagate RWSet from callees (only private methods) to callers
       propagateRWSets(graph);
