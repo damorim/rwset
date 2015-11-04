@@ -24,6 +24,7 @@ cp `find ${DATADIR} -name "*.properties" | xargs` ${BINDIR}
 
 ## generating jar files
 (cd $CURRDIR/example-apps;
+<<<<<<< HEAD
  
 ## (cd src/biblioteca-src;  ./genJar )
  ./genAppJar coffee
@@ -33,3 +34,16 @@ cp `find ${DATADIR} -name "*.properties" | xargs` ${BINDIR}
  (cd src/logica-src; ./genJar )
  
 )
+=======
+    
+    ./genAppJar coffee
+    ./genAppJar foo
+    (cd src/hardware-src; ./genJar )
+    (cd src/logica-src; ./genJar )
+    
+# missing libraries 
+# (cd src/biblioteca-src;  ./genJar )
+# (cd src/escola-src; ./genJar )
+    
+)
+>>>>>>> 76ad96127783b32d6c65c46de5424437b7983232

@@ -3,7 +3,6 @@
 > Directories
 
 bin - build files (e.g., class files)
-code-instrumentation - ignore
 dat - resources (e.g., xml and txt configuration files)
 docs - some documentation 
 example-apps - sample applications to demo this project  

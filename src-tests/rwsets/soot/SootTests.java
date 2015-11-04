@@ -8,6 +8,7 @@ import java.util.Properties;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.Ignore;
 
 import rwsets.Helper;
 
@@ -32,7 +33,7 @@ public class SootTests {
   String EXAMPLES_JAR = EXAMPLES; 
   String RESOURCES_DIR = USER_DIR + SEP + "dat";
 
-  @Test
+  @Ignore @Test
   public void testPointsToAnalysis() throws Exception {
     String strCompUnit = EXAMPLES_SRC + SEP + "soot/ContainerTest2.java";
     String exclusionFile = RESOURCES_DIR + SEP + "ExclusionAllJava.txt";
