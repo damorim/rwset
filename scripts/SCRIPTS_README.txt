@@ -27,7 +27,7 @@ The list in alphabetical order:
 Example of use 1 (Scenario "dependency graph"):
 
 $> ./build
-$> ./genAppJar
+############  $> ./genAppJar
 $> ./genDDG
 $> acroread results/results.pdf
 

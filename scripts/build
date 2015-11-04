@@ -25,12 +25,11 @@ cp `find ${DATADIR} -name "*.properties" | xargs` ${BINDIR}
 ## generating jar files
 (cd $CURRDIR/example-apps;
  
- (cd src/biblioteca-src;  ./genJar )
+## (cd src/biblioteca-src;  ./genJar )
  ./genAppJar coffee
- (cd src/escola-src; ./genJar )
+## (cd src/escola-src; ./genJar )
  ./genAppJar foo
  (cd src/hardware-src; ./genJar )
  (cd src/logica-src; ./genJar )
  
 )
-

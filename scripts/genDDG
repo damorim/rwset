@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ## this is the name of the project directory.
 CURRDIR="$(X=`pwd` && find $X -name "common" | sed "s/common//").."
 
@@ -8,8 +7,6 @@ if [[ `pwd` == *"scripts"* ]]
 then
     ln -s ${CURRDIR}/results
 fi
-
-exit
 
 ## load variable definitions to help scripts (e.g., CLASSPATH, BINDIR, etc.)
 source ${CURRDIR}/scripts/common
@@ -51,6 +48,8 @@ esac
 
 ## make sure you build first
 ${CURRDIR}/scripts/build
+
+echo $JARFILE
 
 ## call java depend.Main
 java -cp "${CURRDIR}:${BINDIR}:${LIBDIR}/wala-r3501-slice.jar:${CLASSPATH}:${JARFILE}" \
