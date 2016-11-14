@@ -4,46 +4,28 @@
 CURRDIR="$(X=`pwd` && find $X -name "common" | sed "s/common//").."
 
 ## load variable definitions to help scripts (e.g., CLASSPATH, BINDIR, etc.)
-source ${CURRDIR}/scripts/common
+#source ${CURRDIR}/scripts/common
 
 ## create bin dir if it does not exist
-mkdir -p ${BINDIR}
+#mkdir -p ${BINDIR}
 
 ## compile source and tests
-find ${SRCDIR} -name *.java | xargs javac -g -cp $CLASSPATH -d ${BINDIR}
-find ${SRCTESTSDIR} -name *.java | xargs javac -g -cp $CLASSPATH -d ${BINDIR}
+#find ${SRCDIR} -name *.java | xargs javac -g -cp $CLASSPATH -d ${BINDIR}
+#find ${SRCTESTSDIR} -name *.java | xargs javac -g -cp $CLASSPATH -d ${BINDIR}
 
 ## report number of classes generated
-NUM=`find ${BINDIR} -name *class | wc -l`
-echo "compiled $NUM classes"
+#NUM=`find ${BINDIR} -name *class | wc -l`
+#echo "compiled $NUM classes"
 
 ## moving resources into build directories
-cp `find ${DATADIR} -name "*.txt" | xargs` ${BINDIR}
-cp `find ${DATADIR} -name "*.xml" | xargs` ${BINDIR}
-cp `find ${DATADIR} -name "*.properties" | xargs` ${BINDIR}
+#cp `find ${DATADIR} -name "*.txt" | xargs` ${BINDIR}
+#cp `find ${DATADIR} -name "*.xml" | xargs` ${BINDIR}
+#cp `find ${DATADIR} -name "*.properties" | xargs` ${BINDIR}
 
 ## generating jar files
 (cd $CURRDIR/example-apps;
-<<<<<<< HEAD
- 
-## (cd src/biblioteca-src;  ./genJar )
  ./genAppJar coffee
-## (cd src/escola-src; ./genJar )
  ./genAppJar foo
  (cd src/hardware-src; ./genJar )
  (cd src/logica-src; ./genJar )
- 
 )
-=======
-    
-    ./genAppJar coffee
-    ./genAppJar foo
-    (cd src/hardware-src; ./genJar )
-    (cd src/logica-src; ./genJar )
-    
-# missing libraries 
-# (cd src/biblioteca-src;  ./genJar )
-# (cd src/escola-src; ./genJar )
-    
-)
->>>>>>> 76ad96127783b32d6c65c46de5424437b7983232

@@ -51,8 +51,9 @@ ${CURRDIR}/scripts/build
 
 echo $JARFILE
 
+#-javaagent:${LIBDIR}/file-leak-detector-1.8-jar-with-dependencies.jar=trace
 ## call java depend.Main
-java -cp "${CURRDIR}:${BINDIR}:${LIBDIR}/wala-r3501-slice.jar:${CLASSPATH}:${JARFILE}" \
+java -cp "${BINDIR}:${CLASSPATH}:${JARFILE}" \
     depend.Main \
     -appJar=${JARFILE} \
     -printWalaWarnings=false \

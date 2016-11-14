@@ -5,3 +5,5 @@ results/results.pdf
 dat/wala.examples.properties
 dat/wala.properties
 src-tests/coffeemaker/*.pdf
+target
+classpath

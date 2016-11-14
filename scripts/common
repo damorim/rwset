@@ -6,17 +6,11 @@ then
     exit
 fi
 
-export SRCDIR=${CURRDIR}/src
-export SRCTESTSDIR=${CURRDIR}/src-tests
-export BINDIR=${CURRDIR}/bin
-export LIBDIR=${CURRDIR}/libs
-export DATADIR=${CURRDIR}/dat
+export BINDIR=${CURRDIR}/target/classes/
 
-CLASSPATH=$BINDIR
-for x in `ls $LIBDIR/*.jar`
-do
-    CLASSPATH=$CLASSPATH:$x
-done
+#generated during build (see pom.xml)
+DEPS=$(<"${CURRDIR}/classpath")
+CLASSPATH="${BINDIR}:${DEPS}"
 
 OS_KERNEL=`uname -s`
 if [ $OS_KERNEL = "Darwin" ]
